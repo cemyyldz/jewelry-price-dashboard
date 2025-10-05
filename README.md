@@ -1,4 +1,4 @@
-#Proje Hakkında / About the Project
+Proje Hakkında / About the Project
 
 
 Bu proje, kuyumcu dükkanları, finans siteleri veya bireysel kullanıcılar için **canlı fiyat takibi** sağlayan modern bir web uygulamasıdır.
@@ -11,7 +11,7 @@ Its customizable structure allows adaptation for different products and price so
 
 ---
 
-#Özellikler / Features
+Özellikler / Features
 
 - Gerçek zamanlı fiyat güncelleme
 - Responsive tasarım, mobil uyumlu
@@ -21,7 +21,7 @@ Its customizable structure allows adaptation for different products and price so
 
 ---
 
-#Kullanılan Teknolojiler / Technologies
+Kullanılan Teknolojiler / Technologies
 
 - HTML5
 - CSS3
@@ -30,22 +30,27 @@ Its customizable structure allows adaptation for different products and price so
 
 ---
 
-#Kullanım / How to Use
+Kullanım / How to Use
 
 1. Projeyi indirin.
 2. `index.html` dosyasını tarayıcınızda açın.
 3. Canlı fiyatların görüntülendiğini ve fonksiyonların çalıştığını görün.
 
 ---
+Canlı Gösterim / Live Demo
+Projeye şu adresten ulaşabilirsiniz:
+```
+https://kullaniciadi.github.io/kuyumcu-canli-fiyat-live-price/](https://cemyyldz.github.io/jewelry-price-dashboard/
+```
 
-#Özelleştirme / Customization
+Özelleştirme / Customization
 
 Bu proje, farklı fiyat kaynakları, ürün listeleri ve stil düzenlemeleri için kolayca uyarlanabilir.
 Fonksiyonlar, JavaScript dosyasında basit değişikliklerle güncellenebilir.
 
 ---
 
-#Lisans / License
+Lisans / License
 MIT Lisansı (MIT License)
 Bu proje MIT Lisansı ile lisanslanmıştır.
 © 2025 Oğulcem Yıldız

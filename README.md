@@ -12,6 +12,7 @@ Its customizable structure allows adaptation for different products and price so
 ---
 
 #Özellikler / Features
+
 - Gerçek zamanlı fiyat güncelleme
 - Responsive tasarım, mobil uyumlu
 - Basit, temiz ve kullanıcı dostu arayüz
@@ -21,6 +22,7 @@ Its customizable structure allows adaptation for different products and price so
 ---
 
 #Kullanılan Teknolojiler / Technologies
+
 - HTML5
 - CSS3
 - JavaScript (ES6)
@@ -29,6 +31,7 @@ Its customizable structure allows adaptation for different products and price so
 ---
 
 #Kullanım / How to Use
+
 1. Projeyi indirin.
 2. `index.html` dosyasını tarayıcınızda açın.
 3. Canlı fiyatların görüntülendiğini ve fonksiyonların çalıştığını görün.
@@ -36,6 +39,7 @@ Its customizable structure allows adaptation for different products and price so
 ---
 
 #Özelleştirme / Customization
+
 Bu proje, farklı fiyat kaynakları, ürün listeleri ve stil düzenlemeleri için kolayca uyarlanabilir.
 Fonksiyonlar, JavaScript dosyasında basit değişikliklerle güncellenebilir.
 

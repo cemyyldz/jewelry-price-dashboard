@@ -1,7 +1,7 @@
 #Proje Hakkında / About the Project
 
 
-Bu proje, kuyumcu dükkanları, finans siteleri veya bireysel kullanıcılar için **canlı fiyat takibi**sağlayan modern bir web uygulamasıdır.
+Bu proje, kuyumcu dükkanları, finans siteleri veya bireysel kullanıcılar için **canlı fiyat takibi** sağlayan modern bir web uygulamasıdır.
 HTML, CSS, JavaScript ve Bootstrap kullanılarak geliştirilmiştir.
 Kolayca özelleştirilebilir yapısıyla, farklı ürünler ve fiyat kaynakları için uyarlanabilir.
 
@@ -35,13 +35,13 @@ Its customizable structure allows adaptation for different products and price so
 
 ---
 
-## 🛠 Özelleştirme / Customization
+#Özelleştirme / Customization
 Bu proje, farklı fiyat kaynakları, ürün listeleri ve stil düzenlemeleri için kolayca uyarlanabilir.
 Fonksiyonlar, JavaScript dosyasında basit değişikliklerle güncellenebilir.
 
 ---
 
-## 📜 Lisans / License
+#Lisans / License
 MIT Lisansı (MIT License)
 Bu proje MIT Lisansı ile lisanslanmıştır.
 © 2025 Oğulcem Yıldız

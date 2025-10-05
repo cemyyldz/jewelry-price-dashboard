@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Altın Fiyatları</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #fff8e1, #fffdf5);
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .board {
+      border-radius: 15px;
+      padding: 20px;
+      background-color: #fefefe;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .top-box {
+      background: linear-gradient(90deg, #ffd700, #ffecb3);
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      padding: 15px;
+      border-radius: 10px;
+      color: #5c3d1a;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .price-table th,
+    .price-table td {
+      text-align: center;
+      vertical-align: middle;
+      font-size: 26px;
+      font-weight: 800;
+      border: 2px solid #d4af37 !important;
+      height: 65px;
+      transition: all 0.3s ease;
+    }
+
+    .price-table tbody tr:hover {
+      background-color: #fff8e1;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+    }
+
+    .price-table td[id*="alis__"],
+    .price-table td[id*="satis__"] {
+      background: linear-gradient(135deg, #ffffff, #f8f9fa);
+      font-weight: 800;
+      color: #2c3e50;
+      font-size: 28px;
+    }
+
+    .side-box {
+      text-align: center;
+      background: #fff8dc;
+      border-radius: 15px;
+      border: 2px solid #ffd700;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      margin-bottom: 20px;
+    }
+
+    .side-box img {
+      max-width: 150px;
+      margin: 15px 0;
+      transition: transform 0.3s;
+    }
+
+    .side-box img:hover {
+      transform: scale(1.1);
+    }
+
+    .update-box {
+      background: rgba(255, 243, 205, 0.6);
+      color: #856404;
+      font-weight: bold;
+      font-size: 28px;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid rgba(255, 238, 186, 0.6);
+      margin-bottom: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer {
+      background: linear-gradient(to right, #ffefba, #fff1d6);
+      color: #5c3d1a;
+      font-weight: bold;
+      font-size: 25px;
+      padding: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    /* kayan yazı istersek ekleriz , istersen kapatabilirsin*/ .marquee {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 12s linear infinite;
+    } 
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .yellow-col {
+      background-color: #fff3b0;
+      font-weight: bold;
+      text-align: center;
+      font-size: 26px;
+      border-radius: 8px;
+    }
+
+    .blue-col {
+      background: linear-gradient(135deg, #cce5ff, #b3d9ff);
+      font-weight: 900;
+      border-radius: 6px;
+      color: #1565c0;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
+      font-size: 28px;
+    }
+
+    .red-bg {
+      background: linear-gradient(135deg, #ff4444, #cc0000) !important;
+      color: white !important;
+      font-weight: 900;
+      text-align: center;
+      border-radius: 4px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2);
+      font-size: 28px;
+    }
+
+    .table-header {
+      background: linear-gradient(135deg, #ffe699, #ffd966);
+      font-weight: 900;
+      font-size: 24px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-header th {
+      text-align: center;
+      vertical-align: middle;
+      padding: 12px 8px;
+      border: 2px solid #d4af37 !important;
+      color: #5c3d1a;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+      font-weight: 900;
+    }
+
+    .table-container {
+      display: flex;
+      gap: 0;
+      margin-bottom: 0;
+    }
+
+    .table-container table {
+      flex: 1;
+      border-collapse: collapse;
+      margin: 0;
+    }
+
+    .table-container table td {
+      border: 2px solid #d4af37 !important;
+    }
+
+    @media (max-width: 768px) {
+      .top-box {
+        font-size: 24px;
+      }
+
+      .price-table th,
+      .price-table td {
+        font-size: 20px;
+        height: 50px;
+      }
+
+      .price-table td[id*="alis__"],
+      .price-table td[id*="satis__"] {
+        font-size: 22px;
+      }
+
+      .blue-col,
+      .red-bg,
+      .yellow-col {
+        font-size: 22px;
+      }
+
+      .update-box {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
+      .table-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+   
+    .has-altin-box {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+
+  
+    .has-altin-box>.altin-card {
+      flex: 1 1 0;
+      min-width: 160px;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem;
+      border-radius: 8px;
+    }
+
+    .big-price {
+      color: #000;
+      display: inline-block;
+      font-weight: 900;
+    
+      font-size: clamp(22px, 4.6vw, 44px);
+      line-height: 1;
+      letter-spacing: 0.6px;
+      transition: transform 0.18s ease, color 0.18s ease;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .alt-label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      opacity: 0.95;
+      margin-bottom: 4px;
+    }
+
+    .has-altin-box .altin-card:hover .big-price {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    @media (max-width: 576px) {
+      .has-altin-box {
+        gap: 0.4rem;
+        flex-wrap: wrap;
+      }
+
+      .has-altin-box>.altin-card {
+        min-width: 120px;
+        min-height: 62px;
+      }
+
+      .big-price {
+        font-size: clamp(18px, 7.5vw, 32px);
+
+      }
+    }
+
+    .has-altin-title {
+      font-weight: 900;
+      font-size: clamp(24px, 5vw, 40px);
+      color: #000;
+      line-height: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container my-4">
+    <div class="board">
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="d-flex justify-content-center gap-2 flex-wrap has-altin-box" data-node="ALTIN">
+            <div class="p-3 bg-warning text-dark rounded text-center flex-grow-1 altin-card">
+              <strong class="has-altin-title">HAS ALTIN</strong>
+            </div>
+
+
+            <div class="p-3 bg-success text-white rounded text-center flex-grow-1 altin-card">
+              <span id="alis__genel__ALTIN" class="fw-bold big-price">-</span>
+            </div>
+
+
+            <div class="p-3 bg-danger text-white rounded text-center flex-grow-1 altin-card">
+              <span id="satis__genel__ALTIN" class="fw-bold big-price">-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 mb-1">
+          <table class="table table-bordered price-table">
+            <thead class="table-header">
+              <tr>
+                <th>Ürün</th>
+                <th>Alış</th>
+                <th>Satış</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-node="KULCEALTIN">
+                <td class="blue-col">24 AYAR GRAM</td>
+                <td id="alis__KULCEALTIN">-</td>
+                <td id="satis__KULCEALTIN">-</td>
+              </tr>
+              <tr data-node="AYAR22">
+                <td class="blue-col">22 AYAR GRAM</td>
+                <td id="alis__genel__AYAR22">-</td>
+                <td id="satis__genel__AYAR22">-</td>
+              </tr>
+              <tr data-node="AYAR22">
+                <td class="blue-col">AJDA / BURMA BİLEZİK</td>
+                <td id="alis__genel__AYAR22">-</td>
+                <td id="satis__ajda">--</td>
+              </tr>
+              <tr data-node-x="ATA_YENI">
+                <td class="blue-col">CUMHURİYET (ATA)</td>
+                <td id="alis__ata">-</td>
+                <td id="satis__ata">--</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-4 mb-1">
+          <div class="side-box d-flex flex-column justify-content-center align-items-center p-3"
+            style="height: 245px; background-color: #fffdf5; border-radius: 10px; box-shadow: none; border: none;">
+            <img src="assets/images/ak_logo_white.svg" alt="Altın Barlar"
+              style="width: 100%; max-width: 400px; height: auto; object-fit: contain; margin-bottom: 10px;">
+            <img src="assets/images/kulce.jpg" alt="Külçe" style="max-width: 80%; height: auto; object-fit: contain;">
+          </div>
+          <div class="update-box text-center mb-2 mt-4">
+            <div class="update-marquee">
+              <span id="lastUpdate"></span>
+            </div>
+          </div>
+        </div>
+        <div class="footer mb-2">
+          <div class="marquee">
+            <span>⚠️ KAPALIÇARŞI ALTIN FİYATLARI ⚠️</span>
+          </div>
+        </div>
+        <div class="row mt-1">
+          <table class="table table-bordered price-table">
+            <thead class="table-header">
+              <tr>
+                <th style="width: 18%;">Ürün</th>
+                <th style="width: 21%;">Alış</th>
+                <th style="width: 20%">Satış</th>
+                <th style="width: 20%;">Yeni Alış</th>
+                <th style="width: 20%;">Yeni Satış</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="5" style="padding: 0; border: none;">
+                  <div class="table-container">
+                    <table style="border-collapse: collapse;">
+                      <tr data-node-x="CEYREK_ESKI">
+                        <td class="blue-col" style="width: 25%; border-right: none;">ÇEYREK</td>
+                        <td class="red-bg" style="width: 10%;">E</td>
+                        <td id="alis__CEYREK_ESKI" style="width: 20%;">-</td>
+                        <td id="satis__CEYREK_ESKI" style="width: 20%; border-right: none;">-
+                        </td>
+                      </tr>
+                    </table>
+                    <table style="border-collapse: collapse;">
+                      <tr data-node-x="CEYREK_YENI">
+                        <td class="red-bg" style="width: 10%; border-left: none;">Y</td>
+                        <td id="alis__CEYREK_YENI" style="width: 20%;">-</td>
+                        <td id="satis__CEYREK_YENI" style="width: 20%;">-</td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <tr> <!--burdan sonraasında artık data node degerinin bir anlamı yoktur cunku degeri ceyrek uzerınden kendı fonksıyonumuzdan alıyoruz, istersek yukarıdaki gibi hazır fiyat çekebiliriz. -->
+                <td colspan="5" style="padding: 0; border: none;">
+                  <div class="table-container">
+                    <table style="border-collapse: collapse;">
+                      <tr data-node-x="YARIM_ESKI">
+                        <td class="blue-col" style="width: 25%; border-right: none;">YARIM</td>
+                        <td class="red-bg" style="width: 10%;">S</td>
+                        <td id="alis__eyarim" style="width: 20%;">-</td>
+                        <td id="satis__eyarim" style="width: 20%; border-right: none;">-</td>
+                      </tr>
+                    </table>
+                    <table style="border-collapse: collapse;">
+                      <tr>
+                        <td class="red-bg" style="width: 10%; border-left: none;">E</td>
+                        <td id="alis__yyarim" style="width: 20%;">-</td>
+                        <td id="satis__yyarim" style="width: 20%;">-</td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5" style="padding: 0; border: none;">
+                  <div class="table-container">
+                    <table style="border-collapse: collapse;">
+                      <tr data-node-x="TEK_ESKI">
+                        <td class="blue-col" style="width: 25%; border-right: none;">TAM</td>
+                        <td class="red-bg" style="width: 10%;">K</td>
+                        <td id="alis__etam" style="width: 20%;">-</td>
+                        <td id="satis__etam" style="width: 20%; border-right: none;">-</td>
+                      </tr>
+                    </table>
+                    <table style="border-collapse: collapse;">
+                      <tr data-node-x="TEK_YENI">
+                        <td class="red-bg" style="width: 10%; border-left: none;">N</td>
+                        <td id="alis__ytam" style="width: 20%;">-</td>
+                        <td id="satis__ytam" style="width: 20%;">-</td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5" style="padding: 0; border: none;">
+                  <div class="table-container">
+                    <table style="border-collapse: collapse;">
+                      <tr data-node-x="GREMESE_ESKI">
+                        <td class="blue-col" style="width: 25%; border-right: none;">GREMSE</td>
+                        <td class="red-bg" style="width: 10%;">İ</td>
+                        <td id="alis__egremese" style="width: 20%;">-</td>
+                        <td id="satis__egremese" style="width: 20%; border-right: none;">-
+                        </td>
+                      </tr>
+                    </table>
+                    <table style="border-collapse: collapse;">
+                      <tr data-node-x="GREMESE_YENI">
+                        <td class="red-bg" style="width: 10%; border-left: none;">İ</td>
+                        <td id="alis__ygremese" style="width: 20%;">-</td>
+                        <td id="satis__ygremese" style="width: 20%;">-</td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script async src="../www.googletagmanager.com/gtag/js5339?id=G-75XW173RRR"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-75XW173RRR'); </script>
+
+<script src="assets/js/functions.js"></script>
+<script>
+  var socket;
+  var ajax_timer;
+  var ajax_interval = 1000;
+
+  var prices = {};
+
+
+  function fark(satis, kapanis) {
+  
+
+    let tmp = Math.abs(((kapanis - satis) / kapanis) * 100);
+    if (tmp === Infinity) {
+      return "%0.00";
+    } else {
+      return "<span class=xyuzde>%</span>" + tmp.toFixed(2);
+    }
+
+  }
+  var guncel_fiyat = {
+    "data": {}
+  };
+  ajax_fiyat_oku('https://canlipiyasalar.haremaltin.com/tmp/altin.json?dil_kodu=tr',
+    function (single_data) {
+      fiyat_isle(single_data);
+    },
+    function (data) {
+      ajax_interval = data.meta.fiyat_guncelleme;
+
+      let z = intToDateString(data.meta.time, true);
+      $('#fiyat_zaman_doviz').html(z);
+      $('#fiyat_zaman_altin').html(z);
+      guncel_fiyat = data;
+    }
+  );
+  function updateTime() {
+    const now = new Date();
+    const options = { day: '2-digit', month: 'long', year: 'numeric' };
+    const date = now.toLocaleDateString('tr-TR', options);
+    const time = now.toLocaleTimeString('tr-TR');
+    document.getElementById("lastUpdate").textContent = `${date} | ${time}`;
+  }
+
+
+  updateTime();
+
+
+  setInterval(updateTime, 1000);
+
+
+  function connect_ajax() {
+
+    clearInterval(ajax_timer);
+    if (ajax_interval < 100 || ajax_interval == undefined) {
+      ajax_interval = 1000;
+    }
+    ajax_timer = setInterval(() => {
+
+      ajax_fiyat_oku('https://canlipiyasalar.haremaltin.com/tmp/altin.json?dil_kodu=tr',
+        function (single_data) {
+          fiyat_isle(single_data);
+
+        },
+        function (data) {
+          ajax_interval = data.meta.fiyat_guncelleme;
+          connect_ajax();
+
+          let z = intToDateString(data.meta.time, true);
+        
+          $('.zaman').html(z);
+        }
+      );
+    }, ajax_interval);
+  }
+
+  let store = {}
+  const urunler = [
+    'CEYREK_ESKI',
+    'CEYREK_YENI',
+    'YARIM_ESKI',
+    'YARIM_YENI',
+    'TEK_ESKI',
+    'TEK_YENI',
+    'ATA_ESKI',
+    'ATA_YENI',
+    'GREMESE_ESKI',
+    'GREMESE_YENI',
+    'ATA5_ESKI',
+    'ATA5_YENI'
+  ];
+  function hesaplaAjda() {
+
+    let alisGenel = parseFloat($("#alis__genel__ALTIN").text().replace(/\./g, "").replace(",", "."));
+    let satisGenel = parseFloat($("#satis__genel__ALTIN").text().replace(/\./g, "").replace(",", "."));
+
+
+    if (!isNaN(alisGenel) && !isNaN(satisGenel)) {
+      let ajdaAlis = alisGenel * 0.910;  
+      let ajdaSatis = satisGenel * 0.940; 
+
+      ajdaAlis = parseFloat(ajdaAlis.toFixed(2));
+      ajdaSatis = parseFloat(ajdaSatis.toFixed(2));
+
+ 
+      $("#alis__ajda").text(_formatNumber(ajdaAlis));
+      $("#satis__ajda").text(_formatNumber(ajdaSatis));
+    }
+  }
+  function hesaplaAta() {
+    let alisGenel = parseFloat($("#alis__genel__ALTIN").text().replace(/\./g, "").replace(",", "."));
+    let satisGenel = parseFloat($("#satis__genel__ALTIN").text().replace(/\./g, "").replace(",", "."));
+
+    if (!isNaN(alisGenel) && !isNaN(satisGenel)) {
+      let ataAlis = alisGenel * 6.62;
+      let ataSatis = satisGenel * 6.71;
+
+      ataAlis = parseFloat(ataAlis.toFixed(2));
+      ataSatis = parseFloat(ataSatis.toFixed(2));
+
+
+      $("#alis__ata").text(_formatNumber(ataAlis));
+      $("#satis__ata").text(_formatNumber(ataSatis));
+    }
+  }
+  function hesaplayyarim() {
+
+    let alisGenel = parseFloat($("#alis__CEYREK_YENI").text().replace(/\./g, "").replace(",", "."));
+    let satisGenel = parseFloat($("#satis__CEYREK_YENI").text().replace(/\./g, "").replace(",", "."));
+
+    if (!isNaN(alisGenel) && !isNaN(satisGenel)) {
+
+      let yyarimAlis = alisGenel * 2;
+
+      let yyarimSatis = satisGenel * 2;
+      $("#alis__yyarim").text(_formatNumber(yyarimAlis));
+      $("#satis__yyarim").text(_formatNumber(yyarimSatis));
+    }
+
+  }
+  function hesaplaeyarim() {
+
+    let alisGenel = parseFloat($("#alis__CEYREK_ESKI").text().replace(/\./g, "").replace(",", "."));
+    let satisGenel = parseFloat($("#satis__CEYREK_ESKI").text().replace(/\./g, "").replace(",", "."));
+
+    if (!isNaN(alisGenel) && !isNaN(satisGenel)) {
+
+      let eyarimAlis = alisGenel * 2;
+
+      let eyarimSatis = satisGenel * 2;
+      $("#alis__eyarim").text(_formatNumber(eyarimAlis));
+      $("#satis__eyarim").text(_formatNumber(eyarimSatis));
+    }
+
+  }
+  function hesaplaytam() {
+
+    let alisGenel = parseFloat($("#alis__CEYREK_YENI").text().replace(/\./g, "").replace(",", "."));
+    let satisGenel = parseFloat($("#satis__CEYREK_YENI").text().replace(/\./g, "").replace(",", "."));
+
+    if (!isNaN(alisGenel) && !isNaN(satisGenel)) {
+
+      let ytamAlis = alisGenel * 4;
+
+      let ytamSatis = satisGenel * 4;
+      $("#alis__ytam").text(_formatNumber(ytamAlis));
+      $("#satis__ytam").text(_formatNumber(ytamSatis));
+    }
+
+  }
+  function hesaplaetam() {
+
+    let alisGenel = parseFloat($("#alis__CEYREK_ESKI").text().replace(/\./g, "").replace(",", "."));
+    let satisGenel = parseFloat($("#satis__CEYREK_ESKI").text().replace(/\./g, "").replace(",", "."));
+
+    if (!isNaN(alisGenel) && !isNaN(satisGenel)) {
+
+      let etamAlis = alisGenel * 4;
+
+      let etamSatis = satisGenel * 4;
+
+      $("#alis__etam").text(_formatNumber(etamAlis));
+      $("#satis__etam").text(_formatNumber(etamSatis));
+    }
+
+  }
+  function hesaplaygremese() {
+
+    let alisGenel = parseFloat($("#alis__CEYREK_YENI").text().replace(/\./g, "").replace(",", "."));
+    let satisGenel = parseFloat($("#satis__CEYREK_YENI").text().replace(/\./g, "").replace(",", "."));
+
+    if (!isNaN(alisGenel) && !isNaN(satisGenel)) {
+
+      let ygremeseAlis = alisGenel * 10;
+
+      let ygremeseSatis = satisGenel * 10;
+      $("#alis__ygremese").text(_formatNumber(ygremeseAlis));
+      $("#satis__ygremese").text(_formatNumber(ygremeseSatis));
+    }
+
+  }
+  function hesaplaegremese() {
+
+    let alisGenel = parseFloat($("#alis__CEYREK_ESKI").text().replace(/\./g, "").replace(",", "."));
+    let satisGenel = parseFloat($("#satis__CEYREK_ESKI").text().replace(/\./g, "").replace(",", "."));
+
+    if (!isNaN(alisGenel) && !isNaN(satisGenel)) {
+
+      let egremeseAlis = alisGenel * 10;
+
+      let egremeseSatis = satisGenel * 10;
+
+      $("#alis__egremese").text(_formatNumber(egremeseAlis));
+      $("#satis__egremese").text(_formatNumber(egremeseSatis));
+    }
+
+  }
+
+
+  var fiyat_isle = function (data) {
+
+    let code = data["code"];
+    if (!code) return;
+
+    let zaman = data['tarih'].split(' ');
+    let x = defs_map[data.code];
+    let tanim = defs[x];
+
+    let elmX = $('[data-node="' + code + '"]');
+
+    if (elmX.length == 0) {
+      elmX = $('[data-node-x="' + code + '"]');
+      if (elmX.length == 0) {
+        return;
+      }
+    }
+
+    if (urunler.includes(code)) {
+      let stored_alis = parseFloat(localStorage.getItem(`${code}_alis`) || 0);
+      let alis_deger = parseFloat(data["alis"]) || 0;
+
+      if (isNaN(stored_alis)) stored_alis = 0;
+      if (isNaN(alis_deger)) alis_deger = 0;
+
+      let yeni_alis_fiyat = stored_alis + alis_deger;
+      elmX.find('#alis__' + code).html(_formatNumber(yeni_alis_fiyat));
+
+      let stored_satis = parseFloat(localStorage.getItem(`${code}_satis`) || 0);
+      let satis_deger = parseFloat(data["satis"]) || 0;
+      if (isNaN(stored_satis)) stored_satis = 0;
+      if (isNaN(satis_deger)) satis_deger = 0;
+
+      let yeni_satis_fiyat = stored_satis + satis_deger;
+
+      elmX.find('#satis__' + code).html(_formatNumber(yeni_satis_fiyat));
+      elmX.find('#fark__' + code).html(fark(yeni_satis_fiyat, data["kapanis"]));
+    } else {
+      elmX.find('#alis__' + code).html(_formatNumber(data["alis"]));
+      elmX.find('#satis__' + code).html(_formatNumber(data["satis"]));
+      elmX.find('#fark__' + code).html(fark(data["satis"], data["kapanis"]));
+    }
+
+    elmX.find('#alis__genel__' + code).html(_formatNumber(data["alis"]));
+    elmX.find('#satis__genel__' + code).html(_formatNumber(data["satis"]));
+    elmX.find('#fark__genel__' + code).html(fark(data["satis"], data["kapanis"]));
+
+    elmX.find('#alis__altin__' + code).html(_formatNumber(data["alis"]));
+    elmX.find('#satis__altin__' + code).html(_formatNumber(data["satis"]));
+    elmX.find('#satis__altin__fark' + code).html(fark(data["satis"], data["kapanis"]));
+
+    if ($('[data-node="' + code + '"][data-tip]').length == 0) {
+
+      if (data.dir.alis_dir == "up") {
+        elmX.removeClass("down").addClass("up");
+        store[code] = ["up", 3];
+        elmX.find(".pricex").removeClass("upx downx");
+      } else if (data.dir.alis_dir == "down") {
+        elmX.removeClass("up").addClass("down");
+        store[code] = ["down", 3];
+        elmX.find(".pricex").removeClass("upx downx");
+      } else {
+        elmX.removeClass("down up");
+        if (typeof store[code] != "undefined") {
+          if (store[code][0] == "up") {
+            if (store[code][1]-- >= 0 || 1) {
+              elmX.find(".pricex").removeClass("downx").addClass("upx");
+            } else {
+              delete store[code];
+              elmX.find(".pricex").removeClass("upx downx");
+            }
+          } else {
+            if (store[code][1]-- >= 0 || 1) {
+              elmX.find(".pricex").removeClass("upx").addClass("downx");
+            } else {
+              delete store[code];
+              elmX.find(".pricex").removeClass("upx downx");
+            }
+          }
+        }
+      }
+
+      let kapanis = parseFloat(data["kapanis"]);
+      let alis = parseFloat(data["alis"]);
+      let yuzde = 0;
+      if (kapanis > 0) {
+        yuzde = 100 * (alis - kapanis) / kapanis;
+      }
+
+      if (data["satis"] > data["kapanis"]) {
+        elmX.find(".fark").addClass("up").removeClass("down");
+      } else if (data["satis"] < data["kapanis"]) {
+        elmX.find(".fark").addClass("down").removeClass("up");
+      } else {
+        elmX.find(".fark").removeClass("down up");
+      }
+
+    }
+
+    hesaplaAjda();
+    hesaplaAta();
+    hesaplayyarim();
+    hesaplaeyarim();
+    hesaplaetam();
+    hesaplaytam();
+    hesaplaygremese();
+    hesaplaegremese();
+  }
+  var defs = {};
+  var defs_map = {};
+  defs["ALTINTRY"] = { "kod": "ALTIN", "isim": "HAS ALTIN", "isim_en": "ALTIN", "kod1": "ALTIN", "kod2": "TRY" };
+  defs_map["ALTIN"] = "ALTINTRY"
+  defs["KULCEALTINTRY"] = { "kod": "KULCEALTIN", "isim": "GRKULCEALTIN", "isim_en": "KULCEALTIN", "kod1": "KULCEALTIN", "kod2": "TRY" };
+  defs_map["KULCEALTIN"] = "KULCEALTINTRY"
+  defs["ALTINKGUSD"] = { "kod": "USDKG", "isim": "USD/KG", "isim_en": "USD KG", "kod1": "ALTINKG", "kod2": "USD" };
+  defs_map["USDKG"] = "ALTINKGUSD"
+  defs["ALTINKGEUR"] = { "kod": "EURKG", "isim": "EUR/KG", "isim_en": "EUR KG", "kod1": "ALTINKG", "kod2": "EUR" };
+  defs_map["EURKG"] = "ALTINKGEUR"
+  defs["GUMUSTRYTRY"] = { "kod": "GUMUSTRY", "isim": "GÜMÜŞ/TL", "isim_en": "SILVER TL", "kod1": "GUMUSTRY", "kod2": "TRY" };
+  defs_map["GUMUSTRY"] = "GUMUSTRYTRY"
+  defs["ALTIN14TRY"] = { "kod": "AYAR14", "isim": "14 AYAR", "isim_en": "14 AYAR", "kod1": "ALTIN14", "kod2": "TRY" };
+  defs_map["AYAR14"] = "ALTIN14TRY"
+  defs["ALTIN14TRY"] = { "kod": "AYAR22", "isim": "22 AYAR", "isim_en": "22 AYAR", "kod1": "ALTIN14", "kod2": "TRY" };
+  defs_map["AYAR22"] = "ALTIN14TRY"
+  defs["CEYREK_YENITRY"] = { "kod": "CEYREK_YENI", "isim": "ÇEYREK ", "isim_en": "", "kod1": "CEYREK_YENI", "kod2": "TRY" };
+  defs_map["CEYREK_YENI"] = "CEYREK_YENITRY"
+  defs["CEYREK_ESKITRY"] = { "kod": "CEYREK_ESKI", "isim": "ÇEYREK ESKİ", "isim_en": "ESKİ ÇEYREK", "kod1": "CEYREK_ESKI", "kod2": "TRY" };
+  defs_map["CEYREK_ESKI"] = "CEYREK_ESKITRY"
+  defs["YARIM_YENITRY"] = { "kod": "YARIM_YENI", "isim": "YARIM ", "isim_en": "YENİ YARIM", "kod1": "YARIM_YENI", "kod2": "TRY" };
+  defs_map["YARIM_YENI"] = "YARIM_YENITRY"
+  defs["YARIM_ESKITRY"] = { "kod": "YARIM_ESKI", "isim": "YARIM ESKİ", "isim_en": "ESKİ YARIM", "kod1": "YARIM_ESKI", "kod2": "TRY" };
+  defs_map["YARIM_ESKI"] = "YARIM_ESKITRY"
+  defs["TEK_YENITRY"] = { "kod": "TEK_YENI", "isim": "TAM ", "isim_en": "YENİ TAM", "kod1": "TEK_YENI", "kod2": "TRY" };
+  defs_map["TEK_YENI"] = "TEK_YENITRY"
+  defs["TEK_ESKITRY"] = { "kod": "TEK_ESKI", "isim": "TAM ESKİ", "isim_en": "ESKİ TAM", "kod1": "TEK_ESKI", "kod2": "TRY" };
+  defs_map["TEK_ESKI"] = "TEK_ESKITRY"
+  defs["ATA_YENITRY"] = { "kod": "ATA_YENI", "isim": "ATA ", "isim_en": "YENİ ATA", "kod1": "ATA_YENI", "kod2": "TRY" };
+  defs_map["ATA_YENI"] = "ATA_YENITRY"
+  defs["ATA_ESKITRY"] = { "kod": "ATA_ESKI", "isim": "ATA ESKİ", "isim_en": "ESKİ ATA", "kod1": "ATA_ESKI", "kod2": "TRY" };
+  defs_map["ATA_ESKI"] = "ATA_ESKITRY"
+  defs["GREMESE_YENITRY"] = { "kod": "GREMESE_YENI", "isim": "GREMSE", "isim_en": "YENİ GREMESE", "kod1": "GREMESE_YENI", "kod2": "TRY" };
+  defs_map["GREMESE_YENI"] = "GREMESE_YENITRY"
+  defs["GREMESE_ESKITRY"] = { "kod": "GREMESE_ESKI", "isim": "ESKİ GREMSE", "isim_en": "ESKİ GREMESE", "kod1": "GREMESE_ESKI", "kod2": "TRY" };
+  defs_map["GREMESE_ESKI"] = "GREMESE_ESKITRY"
+  defs["ATA5_YENITRY"] = { "kod": "ATA5_YENI", "isim": "ATA 5'Lİ ", "isim_en": "YENİ ATA5", "kod1": "ATA5_YENI", "kod2": "TRY" };
+  defs_map["ATA5_YENI"] = "ATA5_YENITRY"
+  defs["ATA5_ESKITRY"] = { "kod": "ATA5_ESKI", "isim": "ATA 5'Lİ ESKİ", "isim_en": "YENİ ATA5", "kod1": "ATA5_ESKI", "kod2": "TRY" };
+  defs_map["ATA5_ESKI"] = "ATA5_ESKITRY"
+
+  connect_ajax();
+</script>

@@ -39,9 +39,7 @@ Kullanım / How to Use
 ---
 Canlı Gösterim / Live Demo
 Projeye şu adresten ulaşabilirsiniz:
-```
-https://kullaniciadi.github.io/kuyumcu-canli-fiyat-live-price/](https://cemyyldz.github.io/jewelry-price-dashboard/
-```
+https://cemyyldz.github.io/jewelry-price-dashboard/
 
 Özelleştirme / Customization
 

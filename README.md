@@ -1,4 +1,6 @@
 #Proje Hakkında / About the Project
+
+
 Bu proje, kuyumcu dükkanları, finans siteleri veya bireysel kullanıcılar için **canlı fiyat takibi**sağlayan modern bir web uygulamasıdır.
 HTML, CSS, JavaScript ve Bootstrap kullanılarak geliştirilmiştir.
 Kolayca özelleştirilebilir yapısıyla, farklı ürünler ve fiyat kaynakları için uyarlanabilir.

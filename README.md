@@ -30,6 +30,12 @@ Kullanılan Teknolojiler / Technologies
 
 ---
 
+Görünüm
+
+<img width="1232" height="835" alt="Ekran görüntüsü 2025-10-06 003557" src="https://github.com/user-attachments/assets/b56d1f6b-e5d0-40ad-ba2c-c1c3d743ec79" />
+
+---
+
 Kullanım / How to Use
 
 1. Projeyi indirin.
@@ -47,6 +53,7 @@ Bu proje, farklı fiyat kaynakları, ürün listeleri ve stil düzenlemeleri iç
 Fonksiyonlar, JavaScript dosyasında basit değişikliklerle güncellenebilir.
 
 ---
+
 
 Lisans / License
 MIT Lisansı (MIT License)

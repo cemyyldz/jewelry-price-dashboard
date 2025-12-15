@@ -170,31 +170,6 @@ function caprazFiyatHesapla(kod1, kod2, fiyatlar) {
     return result;
 }
 
-function kodBul(code1, fiyatlar) {
-    tip = '';
-
-    code = '';
-    if (fiyatlar[code1 + 'TRY'] != undefined) {
-        tip = 'duz';
-        code = code1 + 'TRY';
-    }
-    else {
-        tip = 'yok';
-    }
-
-    if (fiyatlar[code1 + 'TRY'] != undefined) {
-        tip = 'duz';
-        code = code1 + 'TRY';
-    }
-    else if (fiyatlar['TRY' + code1] != undefined) {
-        tip = 'ters';
-        code = 'TRY' + code1;
-    }
-    
-
-    return [tip, code];
-}
-
 function tersIslem(code, fiyatlar) {
     console.log(code);
     al = 1 / fiyatlar[code]['satis'];

@@ -170,12 +170,6 @@ function caprazFiyatHesapla(kod1, kod2, fiyatlar) {
     return result;
 }
 
-function tersIslem(code, fiyatlar) {
-    console.log(code);
-    al = 1 / fiyatlar[code]['satis'];
-    sat = 1 / fiyatlar[code]['alis'];
-    return { 'alis': al, 'satis': sat };
-}
 
 function _isnumber(num) {
     return !isNaN(parseFloat(num)) && isFinite(num);

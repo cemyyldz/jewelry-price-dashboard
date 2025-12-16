@@ -1,27 +1,3 @@
-$('#login_button').on('click touch', function () {
-    var form_data = "user=" + $('#login_username').val() + "&passwd=" + $('#login_password').val();
-    $.ajax({
-        url: "/ajax/login",
-        method: "POST",
-        data: form_data,
-        success: function (data) {
-            if (data.login != undefined && data.login == true) {
-                location.href = data.redirect;
-           
-            }
-            else {
-                window.alert('Kullanıcı Adı Şifrenizi kontrol ediniz');
-            }
-        },
-        error: function (err) {
-            window.alert('Hata');
-        }
-    });
-});
-
-
-
-
 function ajax_fiyat_oku(url, callback1, callback2) {
     $.ajax({
         "url": url,

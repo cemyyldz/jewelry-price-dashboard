@@ -43,6 +43,14 @@ Kullanım / How to Use
 3. `index.html` dosyasını tarayıcınızda açın.
 4. Canlı fiyatların görüntülendiğini ve fonksiyonların çalıştığını görün.
 
+Hızlı Kullanım
+
+1. `AltinProxyIService` dosyasını **.exe** formatına dönüştürün.
+2. Bir **.bat** dosyası oluşturun.
+3. Oluşturulan `.bat` dosyası çalıştırıldığında:
+   - Önce **.exe** dosyasını başlatır,
+   - Ardından **index.html** dosyasını açar.
+
 ---
 Canlı Gösterim / Live Demo
 Projeye şu adresten ulaşabilirsiniz:

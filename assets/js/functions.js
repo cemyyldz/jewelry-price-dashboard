@@ -110,7 +110,7 @@ function connect_ajax() {
     }
     ajax_timer = setInterval(() => {
 
-        ajax_fiyat_oku('https://canlipiyasalar.haremaltin.com/tmp/altin.json?dil_kodu=tr',
+        ajax_fiyat_oku('http://localhost:5000/api/altin?v=',
             function (single_data) {
                 fiyat_isle(single_data);
 

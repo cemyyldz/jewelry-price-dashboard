@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AltinProxyService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8dae4e425b8b7cf54021b4904a47ed56da19d3c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+508cfc763403e1d4810634b2a1b8d118618ff00c")]
 [assembly: System.Reflection.AssemblyProductAttribute("AltinProxyService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AltinProxyService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -39,8 +39,17 @@ Görünüm
 Kullanım / How to Use
 
 1. Projeyi indirin.
-2. `index.html` dosyasını tarayıcınızda açın.
-3. Canlı fiyatların görüntülendiğini ve fonksiyonların çalıştığını görün.
+2. Terminalde AltinProxyService içerisinde dotnet run komutu çalıştırılmalı.
+3. `index.html` dosyasını tarayıcınızda açın.
+4. Canlı fiyatların görüntülendiğini ve fonksiyonların çalıştığını görün.
+
+Hızlı Kullanım
+
+1. `AltinProxyIService` dosyasını **.exe** formatına dönüştürün.
+2. Bir **.bat** dosyası oluşturun.
+3. Oluşturulan `.bat` dosyası çalıştırıldığında:
+   - Önce **.exe** dosyasını başlatır,
+   - Ardından **index.html** dosyasını açar.
 
 ---
 Canlı Gösterim / Live Demo

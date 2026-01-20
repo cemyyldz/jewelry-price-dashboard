@@ -5,4 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Selenium.WebDriver" Version="4.40.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="144.0.7559.3100" />
+  </ItemGroup>
+
 </Project>

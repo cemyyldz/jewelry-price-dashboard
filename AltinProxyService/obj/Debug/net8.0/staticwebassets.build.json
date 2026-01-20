@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "Sjp6xcW7aZ/ztAUzRZwAyFsXKodDmhs+72rWEPqV/WY=",
+  "Hash": "mP3uI7StJVLLa1nJCU6TqENJNIACkrfC7fNX40k9M1Y=",
   "Source": "AltinProxyService",
   "BasePath": "_content/AltinProxyService",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

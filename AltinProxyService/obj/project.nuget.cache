@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "rFiDotUdqF4=",
+  "dgSpecHash": "yV3TGCRwkwQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cem Yıldız\\OneDrive\\Belgeler\\GitHub\\jewelry-price-dashboard\\AltinProxyService\\AltinProxyService.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Cem Yıldız\\OneDrive\\Masaüstü\\Projelerim\\website(kuyumcu)\\AltinProxyService\\AltinProxyService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Cem Yıldız\\.nuget\\packages\\selenium.webdriver\\4.40.0\\selenium.webdriver.4.40.0.nupkg.sha512",
+    "C:\\Users\\Cem Yıldız\\.nuget\\packages\\selenium.webdriver.chromedriver\\144.0.7559.3100\\selenium.webdriver.chromedriver.144.0.7559.3100.nupkg.sha512"
+  ],
   "logs": []
 }

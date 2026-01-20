@@ -21,3 +21,74 @@ C:\Users\MERT EKER\Desktop\web sitesi\websitesi\www.alacamlikuyumculuk.com\Altin
 C:\Users\MERT EKER\Desktop\web sitesi\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.pdb
 C:\Users\MERT EKER\Desktop\web sitesi\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.genruntimeconfig.cache
 C:\Users\MERT EKER\Desktop\web sitesi\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\ref\AltinProxyService.dll
+C:\Users\MERT EKER\Desktop\web sitesi\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\WebDriver.dll
+C:\Users\MERT EKER\Desktop\web sitesi\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\runtimes\linux\native\selenium-manager
+C:\Users\MERT EKER\Desktop\web sitesi\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\runtimes\osx\native\selenium-manager
+C:\Users\MERT EKER\Desktop\web sitesi\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\runtimes\win\native\selenium-manager.exe
+C:\Users\MERT EKER\Desktop\web sitesi\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.csproj.AssemblyReference.cache
+C:\Users\MERT EKER\Desktop\web sitesi\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinPro.CAEE60A3.Up2Date
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\AltinProxyService.staticwebassets.endpoints.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\AltinProxyService.exe
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\AltinProxyService.deps.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\AltinProxyService.runtimeconfig.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\AltinProxyService.dll
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\AltinProxyService.pdb
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\WebDriver.dll
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\runtimes\linux\native\selenium-manager
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\runtimes\osx\native\selenium-manager
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\bin\Debug\net8.0\runtimes\win\native\selenium-manager.exe
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.csproj.AssemblyReference.cache
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.AssemblyInfoInputs.cache
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.AssemblyInfo.cs
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.csproj.CoreCompileInputs.cache
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\scopedcss\bundle\AltinProxyService.styles.css
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\staticwebassets\msbuild.AltinProxyService.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\staticwebassets\msbuild.AltinProxyService.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\staticwebassets\msbuild.build.AltinProxyService.props
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AltinProxyService.props
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AltinProxyService.props
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinPro.CAEE60A3.Up2Date
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.dll
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\refint\AltinProxyService.dll
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.pdb
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\AltinProxyService.genruntimeconfig.cache
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\websitesi\www.alacamlikuyumculuk.com\AltinProxyService\obj\Debug\net8.0\ref\AltinProxyService.dll
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\bin\Debug\net8.0\AltinProxyService.staticwebassets.endpoints.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\bin\Debug\net8.0\AltinProxyService.exe
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\bin\Debug\net8.0\AltinProxyService.deps.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\bin\Debug\net8.0\AltinProxyService.runtimeconfig.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\bin\Debug\net8.0\AltinProxyService.dll
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\bin\Debug\net8.0\AltinProxyService.pdb
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\bin\Debug\net8.0\WebDriver.dll
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\bin\Debug\net8.0\runtimes\linux\native\selenium-manager
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\bin\Debug\net8.0\runtimes\osx\native\selenium-manager
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\bin\Debug\net8.0\runtimes\win\native\selenium-manager.exe
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinProxyService.csproj.AssemblyReference.cache
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinProxyService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinProxyService.AssemblyInfoInputs.cache
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinProxyService.AssemblyInfo.cs
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinProxyService.csproj.CoreCompileInputs.cache
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinProxyService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\scopedcss\bundle\AltinProxyService.styles.css
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\staticwebassets\msbuild.AltinProxyService.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\staticwebassets\msbuild.AltinProxyService.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\staticwebassets\msbuild.build.AltinProxyService.props
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AltinProxyService.props
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AltinProxyService.props
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinPro.CAEE60A3.Up2Date
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinProxyService.dll
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\refint\AltinProxyService.dll
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinProxyService.pdb
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinProxyService.genruntimeconfig.cache
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\ref\AltinProxyService.dll
+C:\Users\Cem Yıldız\OneDrive\Masaüstü\Projelerim\website(kuyumcu)\AltinProxyService\obj\Debug\net8.0\AltinProxyService.sourcelink.json

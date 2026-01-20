@@ -1,11 +1,100 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "Selenium.WebDriver/4.40.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/WebDriver.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/WebDriver.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Selenium.WebDriver.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/native/selenium-manager": {
+            "assetType": "native",
+            "rid": "linux"
+          },
+          "runtimes/osx/native/selenium-manager": {
+            "assetType": "native",
+            "rid": "osx"
+          },
+          "runtimes/win/native/selenium-manager.exe": {
+            "assetType": "native",
+            "rid": "win"
+          }
+        }
+      },
+      "Selenium.WebDriver.ChromeDriver/144.0.7559.3100": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.ChromeDriver.targets": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Selenium.WebDriver/4.40.0": {
+      "sha512": "y7ESRFracAgUjQEieM42gPdkUEPvffrwmu5XZ4scGCjZ20nJKaJ+qcULegO01g4Chl5+IpVe61mdzXwPM91ddg==",
+      "type": "package",
+      "path": "selenium.webdriver/4.40.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Selenium.WebDriver.targets",
+        "buildTransitive/Selenium.WebDriver.targets",
+        "icon.png",
+        "lib/net462/WebDriver.dll",
+        "lib/net462/WebDriver.xml",
+        "lib/net8.0/WebDriver.dll",
+        "lib/net8.0/WebDriver.xml",
+        "lib/netstandard2.0/WebDriver.dll",
+        "lib/netstandard2.0/WebDriver.xml",
+        "runtimes/linux/native/selenium-manager",
+        "runtimes/osx/native/selenium-manager",
+        "runtimes/win/native/selenium-manager.exe",
+        "selenium.webdriver.4.40.0.nupkg.sha512",
+        "selenium.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.ChromeDriver/144.0.7559.3100": {
+      "sha512": "hzK8NhuZneg7Wz4luluIkJDfOVMKIlxU3lN3ERGQP61VN+xjwTxOuVPc527T//lSMsGHkmVcHbFQF+8+V4ActQ==",
+      "type": "package",
+      "path": "selenium.webdriver.chromedriver/144.0.7559.3100",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "build/DefinePropertiesChromeDriver.targets",
+        "build/Selenium.WebDriver.ChromeDriver.targets",
+        "driver/linux64/LICENSE.chromedriver",
+        "driver/linux64/chromedriver",
+        "driver/mac64/LICENSE.chromedriver",
+        "driver/mac64/chromedriver",
+        "driver/mac64arm/LICENSE.chromedriver",
+        "driver/mac64arm/chromedriver",
+        "driver/win32/LICENSE.chromedriver",
+        "driver/win32/chromedriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.chromedriver.144.0.7559.3100.nupkg.sha512",
+        "selenium.webdriver.chromedriver.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "Selenium.WebDriver >= 4.40.0",
+      "Selenium.WebDriver.ChromeDriver >= 144.0.7559.3100"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Cem Yıldız\\.nuget\\packages\\": {},
@@ -14,11 +103,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cem Yıldız\\OneDrive\\Belgeler\\GitHub\\jewelry-price-dashboard\\AltinProxyService\\AltinProxyService.csproj",
+      "projectUniqueName": "C:\\Users\\Cem Yıldız\\OneDrive\\Masaüstü\\Projelerim\\website(kuyumcu)\\AltinProxyService\\AltinProxyService.csproj",
       "projectName": "AltinProxyService",
-      "projectPath": "C:\\Users\\Cem Yıldız\\OneDrive\\Belgeler\\GitHub\\jewelry-price-dashboard\\AltinProxyService\\AltinProxyService.csproj",
+      "projectPath": "C:\\Users\\Cem Yıldız\\OneDrive\\Masaüstü\\Projelerim\\website(kuyumcu)\\AltinProxyService\\AltinProxyService.csproj",
       "packagesPath": "C:\\Users\\Cem Yıldız\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cem Yıldız\\OneDrive\\Belgeler\\GitHub\\jewelry-price-dashboard\\AltinProxyService\\obj\\",
+      "outputPath": "C:\\Users\\Cem Yıldız\\OneDrive\\Masaüstü\\Projelerim\\website(kuyumcu)\\AltinProxyService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,6 +145,16 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "Selenium.WebDriver": {
+            "target": "Package",
+            "version": "[4.40.0, )"
+          },
+          "Selenium.WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[144.0.7559.3100, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
